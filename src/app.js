@@ -1,6 +1,6 @@
-const express = require('express');
-require('./db/mongoose');
-const vendorRouter = require('./routers/vendor');
+const express = require("express");
+require("./db/mongoose");
+const vendorRouter = require("./routers/vendor");
 
 const app = express();
 
