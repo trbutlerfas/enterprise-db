@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Create the user schema
 const vendorSchema = new mongoose.Schema(
@@ -9,22 +9,20 @@ const vendorSchema = new mongoose.Schema(
 		website: {
 			type: String
 		},
-		address: {
-			street: {
-				type: String
-			},
-			unit: {
-				type: String
-			},
-			city: {
-				type: String
-			},
-			state: {
-				type: String
-			},
-			zip: {
-				type: String
-			}
+		street: {
+			type: String
+		},
+		unit: {
+			type: String
+		},
+		city: {
+			type: String
+		},
+		state: {
+			type: String
+		},
+		zip: {
+			type: String
 		},
 		phone: {
 			type: String
@@ -77,6 +75,6 @@ const vendorSchema = new mongoose.Schema(
 	}
 );
 
-const Vendor = mongoose.model('Vendor', vendorSchema);
+const Vendor = mongoose.model("Vendor", vendorSchema);
 
 module.exports = Vendor;
