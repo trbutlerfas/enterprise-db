@@ -1,0 +1,25 @@
+{
+	"name": "enterprise-db",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"frontend": "cd frontend && npm start",
+		"backend": "cd backend && npm run dev",
+		"start": "concurrently - kill-others \"npm run frontend\" \"npm run backend\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/trbutlerfas/enterprise-db.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/trbutlerfas/enterprise-db/issues"
+	},
+	"homepage": "https://github.com/trbutlerfas/enterprise-db#readme",
+	"dependencies": {
+		"concurrently": "^4.1.2"
+	}
+}
