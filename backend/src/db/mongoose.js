@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URL, {
+mongoose.connect("mongodb+srv://enterprise:Z6iVfD6EDvkKK8WhpcERTceij6@enterprise-afhfw.mongodb.net/enterprise_vendors?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useCreateIndex: true,
 	useFindAndModify: false
