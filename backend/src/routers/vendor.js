@@ -26,7 +26,7 @@ router.get("/:id", async (req, res) => {
 		.then(vendor => res.json(vendor))
 		.catch(err => res.status(400).json("Error: " + err));
 });
-
+// Update Vendor
 router.post("/update/:id", async (req, res) => {
 	await Vendor.findById(req.params.id).then(vendor => {
 		vendor.companyName = req.body.companyName;
