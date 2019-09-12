@@ -57,7 +57,7 @@ export default class EditVendor extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:4000/vendors/'+this.props.match.params.id)
+		axios.get('https://enterprise-vendors.herokuapp.com/vendors/'+this.props.match.params.id)
 		.then(response => {
 			this.setState({
 				companyName: response.data.companyName,
@@ -241,7 +241,7 @@ export default class EditVendor extends Component {
 			services: this.state.services
 		};
 		console.log(vendor);
-		axios.post('http://localhost:4000/vendors/update/' + this.props.match.params.id, vendor).then((res) => console.log(res.data));
+		axios.post('https://enterprise-vendors.herokuapp.com/vendors/update/' + this.props.match.params.id, vendor).then((res) => console.log(res.data));
 
 		window.alert('Vendor Saved!')
 		window.location = '/';

@@ -207,7 +207,7 @@ export default class AddVendor extends Component {
 			services: this.state.services
 		};
 		console.log(vendor);
-		axios.post('http://localhost:4000/vendors/add', vendor).then((res) => console.log(res.data));
+		axios.post('https://enterprise-vendors.herokuapp.com/vendors/add', vendor).then((res) => console.log(res.data));
 
 		window.location = '/';
 	}

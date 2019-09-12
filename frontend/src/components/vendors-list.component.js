@@ -29,7 +29,7 @@ export default class VendorList extends Component {
 	}
 	componentDidMount() {
 		axios
-			.get('http://localhost:4000/vendors/')
+			.get('https://enterprise-vendors.herokuapp.com/vendors/')
 			.then((response) => {
 				this.setState({ vendors: response.data });
 				
@@ -39,7 +39,7 @@ export default class VendorList extends Component {
 			});
 	}
 	deleteVendor(id) {
-		axios.delete('http://localhost:4000/vendors/' + id).then((res) => console.log(res.data));
+		axios.delete('https://enterprise-vendors.herokuapp.com/vendors/' + id).then((res) => console.log(res.data));
 		this.setState({
 			vendors: this.state.vendors.filter((el) => el._id !== id)
 		});
