@@ -11,12 +11,12 @@ export default class Navbar extends Component {
         		</div>
 
         		<ul className="list-unstyled components">
+					<li className="new-vendor">
+						<Link to="/add" className="nav-link">New Vendor</Link>
+					</li>
             		<li className="active">
 			 			<Link to="/" className="nav-link">Vendor List</Link>
             		</li>
-            		<li className="new-vendor">
-						<Link to="/add" className="nav-link">New Vendor</Link>
-					</li>
         		</ul>
 			</nav>
 		);

@@ -15,6 +15,10 @@ body {
 	padding-right: 0px;
 }
 
+.form-control::placeholder {
+	color: #bbbbbb;
+}
+
 .table td {
 	vertical-align: middle;
 }

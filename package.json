@@ -1,15 +1,15 @@
 {
-	"name": "backend",
+	"name": "enterprise-vendor-app-backend",
 	"version": "1.0.0",
-	"description": "",
+	"description": "An frontend application to communicate with the Enterprise Signs vendor database.",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js",
 		"heroku-postbuild": "cd frontend && npm install && npm run build",
 		"dev": "env-cmd -f ./config/dev.env nodemon index.js"
 	},
-	"author": "",
-	"license": "ISC",
+	"author": "Travis Butler",
+	"license": "unlicensed",
 	"dependencies": {
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
