@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-
+const APIEndPoint = process.env.REACT_APP_REQUEST_ENDPOINT;
 
 const Vendor = (props) => (
 	<tr>
@@ -29,7 +29,7 @@ export default class VendorList extends Component {
 	}
 	componentDidMount() {
 		axios
-			.get('https://enterprise-vendors.herokuapp.com/vendors/')
+			.get(APIEndPoint + '/vendors/')
 			.then((response) => {
 				this.setState({ vendors: response.data });
 				
@@ -39,7 +39,7 @@ export default class VendorList extends Component {
 			});
 	}
 	deleteVendor(id) {
-		axios.delete('https://enterprise-vendors.herokuapp.com/vendors/' + id).then((res) => console.log(res.data));
+		axios.delete(APIEndPoint + '/vendors/' + id).then((res) => console.log(res.data));
 		this.setState({
 			vendors: this.state.vendors.filter((el) => el._id !== id)
 		});

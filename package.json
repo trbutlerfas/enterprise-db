@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node index.js",
 		"heroku-postbuild": "cd frontend && npm install && npm run build",
-		"dev": "env-cmd -f ./config/dev.env nodemon index.js"
+		"dev": "nodemon index.js"
 	},
 	"author": "Travis Butler",
 	"license": "unlicensed",
@@ -16,7 +16,7 @@
 		"mongoose": "^5.6.10"
 	},
 	"devDependencies": {
-		"env-cmd": "^9.0.3",
+		"dotenv": "^8.1.0",
 		"nodemon": "^1.19.1"
 	}
 }

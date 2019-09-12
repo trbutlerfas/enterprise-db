@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+const APIEndPoint = process.env.REACT_APP_REQUEST_ENDPOINT;
+
 export default class EditVendor extends Component {
 	constructor(props) {
 		super(props);
@@ -241,7 +243,7 @@ export default class EditVendor extends Component {
 			services: this.state.services
 		};
 		console.log(vendor);
-		axios.post('https://enterprise-vendors.herokuapp.com/vendors/update/' + this.props.match.params.id, vendor).then((res) => console.log(res.data));
+		axios.post(APIEndPoint + '/vendors/update/' + this.props.match.params.id, vendor).then((res) => console.log(res.data));
 
 		window.alert('Vendor Saved!')
 		window.location = '/';

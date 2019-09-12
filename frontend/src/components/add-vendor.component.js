@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+const APIEndPoint = process.env.REACT_APP_REQUEST_ENDPOINT;
+
+
 export default class AddVendor extends Component {
 	constructor(props) {
 		super(props);
@@ -207,7 +210,7 @@ export default class AddVendor extends Component {
 			services: this.state.services
 		};
 		console.log(vendor);
-		axios.post('https://enterprise-vendors.herokuapp.com/vendors/add', vendor).then((res) => console.log(res.data));
+		axios.post(APIEndPoint + '/vendors/add', vendor).then((res) => console.log(res.data));
 
 		window.location = '/';
 	}
