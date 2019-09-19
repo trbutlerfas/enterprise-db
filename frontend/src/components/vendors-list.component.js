@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 const APIEndPoint = process.env.REACT_APP_REQUEST_ENDPOINT;
 
+
 const Vendor = (props) => (
 	<tr>
 		<td>{props.vendor.companyName}</td>
 		<td>{props.vendor.city}</td>
 		<td>{props.vendor.state}</td>
+		<td>{props.vendor.hourlyRate}</td>
 		<td>{props.vendor.firstName + ' ' + props.vendor.lastName}</td>
 		<td>{props.vendor.phone}</td>
 		<td>
@@ -21,6 +23,8 @@ const Vendor = (props) => (
 	</tr>
 );
 
+
+
 export default class VendorList extends Component {
 	constructor(props) {
 		super(props);
@@ -32,7 +36,6 @@ export default class VendorList extends Component {
 			.get(APIEndPoint + '/vendors/')
 			.then((response) => {
 				this.setState({ vendors: response.data });
-				
 			})
 			.catch((error) => {
 				console.log(error);
@@ -52,12 +55,13 @@ export default class VendorList extends Component {
 	render() {
 		return (
 			<div id="content">
-				<table className="table table-striped table-bordered table-lg" id="vendorTablee">
+				<table className="table table-striped table-bordered table-lg">
 					<thead className="thead-light">
 						<tr>
 							<th>Company Name</th>
 							<th>City</th>
 							<th>State</th>
+							<th>Hourly Rate</th>
 							<th>Primary Contact</th>
 							<th>Phone Number</th>
 							<th>Options</th>

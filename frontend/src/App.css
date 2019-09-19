@@ -15,6 +15,102 @@ body {
 	padding-right: 0px;
 }
 
+/* Login Form */
+
+.logo {
+	height: 200px;
+	margin-bottom: 30px;
+}
+
+.login-wrapper {
+	background-color: #fff;
+	padding: 50px 20px;
+}
+
+.login-wrapper h2 {
+	margin-bottom: 30px;
+	font-weight: 200;
+	text-align: center;
+}
+
+.user-login .form-group {
+	margin-bottom: 0px;
+}
+
+.user-login .second .form-control {
+	border-top: 1px solid transparent;
+}
+
+.user-login .form-control:focus {
+	box-shadow: none;
+	border-color: #168b65;
+}
+
+.user-login input {
+	border-radius: 0px;
+	padding: 2rem;
+}
+
+.user-login input::placeholder {
+	color: #6f6f6f;
+}
+
+.user-login .btn-enterprise {
+	background-color: #168b65;
+	border-color: #168b65;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+.user-login .btn-enterprise:hover {
+	background-color: #0f6046;
+	border-color: #0f6046;
+}
+
+/* Create Account */
+
+.user-create .second .form-control {
+	border-top: 1px solid transparent;
+}
+
+.user-create .form-control:focus {
+	box-shadow: none;
+	border-color: #168b65;
+}
+
+.user-create input {
+	border-radius: 0px;
+	padding: 2rem;
+}
+
+.user-create input::placeholder {
+	color: #6f6f6f;
+}
+
+.user-create .btn-enterprise {
+	background-color: #168b65;
+	border-color: #168b65;
+	padding: 1rem;
+	font-size: 1rem;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+.user-create .btn-enterprise:hover {
+	background-color: #0f6046;
+	border-color: #0f6046;
+}
+
+.btn:focus {
+	box-shadow: none;
+}
+
+.btn-primary:focus {
+	box-shadow: none;
+}
+
 .form-control::placeholder {
 	color: #bbbbbb;
 }

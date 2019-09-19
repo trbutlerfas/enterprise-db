@@ -251,7 +251,7 @@ export default class EditVendor extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div id="content">
 				<div className="row justify-content-md-center">
 					<div className="col-lg-8">
 						<form onSubmit={this.onSubmit}>
@@ -525,7 +525,6 @@ export default class EditVendor extends Component {
 											<label>Other Equipment</label>
 											<input
 												type="text"
-												required
 												className="form-control"
 												placeholder="Sign making equipment"
 												value={this.state.equipment}

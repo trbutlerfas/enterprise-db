@@ -209,7 +209,6 @@ export default class AddVendor extends Component {
 			insurance: this.state.insurance,
 			services: this.state.services
 		};
-		console.log(vendor);
 		axios.post(APIEndPoint + '/vendors/add', vendor).then((res) => console.log(res.data));
 
 		window.location = '/';
@@ -217,7 +216,7 @@ export default class AddVendor extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div id="content">
 				<div className="row justify-content-md-center">
 					<div className="col-lg-8">
 						<form onSubmit={this.onSubmit}>
